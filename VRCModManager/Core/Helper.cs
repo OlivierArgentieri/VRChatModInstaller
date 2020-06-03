@@ -15,6 +15,7 @@ namespace VRCModManager.Core
         public static string Get(string URL) {
             Console.WriteLine("GET " + URL);
             try {
+                /**/
                 HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(URL);
                 request.Method = "GET";
                 request.KeepAlive = true;
@@ -24,6 +25,7 @@ namespace VRCModManager.Core
                 using (StreamReader requestReader = new StreamReader(response.GetResponseStream())) {
                     return requestReader.ReadToEnd();
                 }
+                return "";
             }
             catch (Exception ex) {
                 Console.WriteLine(ex.Message);

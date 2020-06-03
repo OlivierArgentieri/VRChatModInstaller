@@ -30,7 +30,9 @@ namespace VRCModManager.Core
         {
             releases.Clear();
 
-            string raw = GetModSaberReleases();
+            //string raw = GetModSaberReleases();
+
+            string raw = null;
             if (raw != null)
             {
                 var mods = JSON.Parse(raw);
